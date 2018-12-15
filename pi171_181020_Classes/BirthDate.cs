@@ -78,6 +78,14 @@ namespace pi171_181020_Classes
     {
       return m_dtBirthDate.ToString("yyyy");
     }
+    /// <summary>
+    /// Получить как дату
+    /// </summary>
+    /// <returns></returns>
+    public DateTime AsDate()
+    {
+      return m_dtBirthDate;
+    }
 
     #endregion
   }

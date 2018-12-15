@@ -63,13 +63,9 @@ namespace pi171_181020_Classes
     /// <returns></returns>
     public string GetFioShort()
     {
-      //return $"{Surname} 
-      //{ Firstname.Substring(0, 1).ToUpperInvariant()}. 
-      //{ Middlename.Substring(0, 1)}.";
-      
       string sFN = Firstname.Substring(0, 1).ToUpperInvariant();
-      string sMN = Middlename.Substring(0, 1);
-      return $"{Surname} {sFN}.{sMN}. ({Birthdate})";
+      string sMN = Middlename.Substring(0, 1).ToUpperInvariant();
+      return $"{Surname} {sFN}.{sMN}.";
     }
 
   }

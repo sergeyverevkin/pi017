@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{074A0263-AB48-4E33-9903-9E9E001EF6E0}</ProjectGuid>
+    <ProjectGuid>{52F6BE59-6044-47F5-8DEE-30B64BA29368}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>pi171_181020_WF</RootNamespace>
-    <AssemblyName>pi171_181020_WF</AssemblyName>
+    <RootNamespace>pi172_181020_WF</RootNamespace>
+    <AssemblyName>pi172_181020_WF</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -46,17 +46,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AuthorForm.cs">
+    <Compile Include="BookForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AuthorForm.Designer.cs">
-      <DependentUpon>AuthorForm.cs</DependentUpon>
+    <Compile Include="BookForm.Designer.cs">
+      <DependentUpon>BookForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="AuthorListForm.cs">
+    <Compile Include="RefAuthorListForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AuthorListForm.Designer.cs">
-      <DependentUpon>AuthorListForm.cs</DependentUpon>
+    <Compile Include="RefAuthorListForm.Designer.cs">
+      <DependentUpon>RefAuthorListForm.cs</DependentUpon>
     </Compile>
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
@@ -64,25 +64,16 @@
     <Compile Include="MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="PerformanceForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="PerformanceForm.Designer.cs">
-      <DependentUpon>PerformanceForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="AuthorForm.resx">
-      <DependentUpon>AuthorForm.cs</DependentUpon>
+    <EmbeddedResource Include="BookForm.resx">
+      <DependentUpon>BookForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AuthorListForm.resx">
-      <DependentUpon>AuthorListForm.cs</DependentUpon>
+    <EmbeddedResource Include="RefAuthorListForm.resx">
+      <DependentUpon>RefAuthorListForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PerformanceForm.resx">
-      <DependentUpon>PerformanceForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -107,9 +98,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\pi171_181020_Classes\pi171_181020_Classes.csproj">
-      <Project>{f701a680-b3ac-4e62-b06a-4a7f5c607a20}</Project>
-      <Name>pi171_181020_Classes</Name>
+    <ProjectReference Include="..\pi172_181020_ClassLibrary\pi172_181020_ClassLibrary.csproj">
+      <Project>{fe95f6cc-8e31-4f0e-98ae-fb0e7f01f8d1}</Project>
+      <Name>pi172_181020_ClassLibrary</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

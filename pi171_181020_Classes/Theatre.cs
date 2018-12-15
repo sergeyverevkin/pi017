@@ -53,8 +53,8 @@ namespace pi171_181020_Classes
       CAuthor pAuthor2 = new CAuthor(
         "Достоевский", "Федор", "Михайлович", 1860, 04, 10);
 
-      AuthorList.Add(pAuthor1);
-      AuthorList.Add(pAuthor2);
+      AuthorList.AddAuthor(pAuthor1);
+      AuthorList.AddAuthor(pAuthor2);
 
       CPerformance pPerformance1 = new CPerformance(
         "Начало",
