@@ -179,6 +179,7 @@
       this.Controls.Add(this.panel2);
       this.Name = "AuthorForm";
       this.Text = "AuthorForm";
+      this.Load += new System.EventHandler(this.AuthorForm_Load);
       this.panel1.ResumeLayout(false);
       this.panel1.PerformLayout();
       this.panel2.ResumeLayout(false);

@@ -39,5 +39,10 @@ namespace pi171_181020_WF
     {
       h_FillToForm();
     }
+
+    private void AuthorForm_Load(object sender, System.EventArgs e)
+    {
+
+    }
   }
 }

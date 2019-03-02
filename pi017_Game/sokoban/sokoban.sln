@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.168
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "sokoban_wf", "sokoban_wf\sokoban_wf.csproj", "{3A0D4135-12F6-4286-A827-DF58BEF4B3E1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "sokoban_classes", "sokoban_classes\sokoban_classes.csproj", "{FED4E932-7674-4976-8F31-C655F477569D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3A0D4135-12F6-4286-A827-DF58BEF4B3E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3A0D4135-12F6-4286-A827-DF58BEF4B3E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3A0D4135-12F6-4286-A827-DF58BEF4B3E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3A0D4135-12F6-4286-A827-DF58BEF4B3E1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FED4E932-7674-4976-8F31-C655F477569D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FED4E932-7674-4976-8F31-C655F477569D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FED4E932-7674-4976-8F31-C655F477569D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FED4E932-7674-4976-8F31-C655F477569D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B1593259-C226-4DAA-AF81-E4019AB097E7}
+	EndGlobalSection
+EndGlobal
