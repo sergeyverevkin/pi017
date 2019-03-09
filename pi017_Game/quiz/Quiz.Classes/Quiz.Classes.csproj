@@ -43,10 +43,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Model\CAnswer.cs" />
-    <Compile Include="Model\CCategory.cs" />
+    <Compile Include="Model\Answer.cs" />
+    <Compile Include="Model\Category.cs" />
+    <Compile Include="Model\GameQuestion.cs" />
+    <Compile Include="Model\GameCategory.cs" />
+    <Compile Include="Model\GameField.cs" />
+    <Compile Include="Model\Player.cs" />
+    <Compile Include="Model\DbQuiz.cs" />
     <Compile Include="Model\Question.cs" />
-    <Compile Include="Quiz.cs" />
+    <Compile Include="Model\Quiz.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
