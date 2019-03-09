@@ -11,11 +11,12 @@ namespace sokoban_wf
   public partial class Form1 : Form
   {
     public CGame m_pGame;
-    Random m_pRand = new Random();
+    private Random m_pRand;
 
     public Form1()
     {
       InitializeComponent();
+      m_pRand = new Random();
       m_pGame = new CGame();
     }
 
@@ -23,10 +24,11 @@ namespace sokoban_wf
     {
       m_pGame.Load();
       h_Refresh();
-      //MessageBox.Show( h_GetRandom(
-      //  new[] { 1, 2 },
-      //  new[] { 90, 10 }
-      //  ).ToString());
+      MessageBox.Show( 
+        h_GetRandom(
+          new[] { 1,  2,  3 },
+          new[] { 70, 20, 10 }
+      ).ToString());
     }
 
     /// <summary>
