@@ -60,13 +60,13 @@ namespace Quiz.Classes.Model
   public class CQuiz
   {
     /*
-         - игрок[]
+    - игрок[]
     - текущий ход (игрок);
     - Игровое поле (использует БазаВопросов); 
-*/
-/// <summary>
-/// Список игроков
-/// </summary>
+    */
+    /// <summary>
+    /// Список игроков
+    /// </summary>
     public List<CPlayer> PlayerList { get; private set; }
     /// <summary>
     /// 

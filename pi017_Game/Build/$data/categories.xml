@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="windows-1251"?>
+<ArrayOfCCategory xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <CCategory id="1">
+    <text>Категория 1</text>
+  </CCategory>
+  <CCategory id="2">
+    <text>Категория 2</text>
+  </CCategory>
+  <CCategory id="3">
+    <text>Категория 3</text>
+  </CCategory>
+  <CCategory id="4">
+    <text>Категория 4</text>
+  </CCategory>
+</ArrayOfCCategory>

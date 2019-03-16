@@ -1,4 +1,9 @@
-﻿namespace Quiz.Classes.Model
+﻿using System.Collections.Generic;
+using System.Drawing;
+using System.Xml;
+using System.Xml.Serialization;
+
+namespace Quiz.Classes.Model
 {
   public class CCategory
   {
@@ -13,11 +18,34 @@
       Text = text;
     }
 
-    /*    - название
-- идентификатор
-*/
+    /// <summary>
+    /// Конструктор
+    /// </summary>
+    private CCategory()
+    {
+    }
 
+
+
+    /*
+     - название
+     - идентификатор
+    */
+
+    [XmlAttribute("id")]
     public int Id { get; set; }
+    [XmlElement("text")]
     public string Text { get; set; }
+    [XmlIgnore]
+    public Color BackColor { get; set; }
+  }
+
+  public class CCategoryList : List<CCategory>
+  {
+    //public new CCategory Items
+    //{
+    //  get { return Items; }
+    //}
+
   }
 }
