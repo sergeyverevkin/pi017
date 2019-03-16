@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<catalog version="1" titleShop="Жираф">
+	<product code="4260000000123">
+		<title>Молоко пастеризованное, 1 л</title>
+		
+	</product>
+	<product code="4260000000456">
+		<title>Кефир, 1%, 1 л</title>
+	</product>
+</catalog>
