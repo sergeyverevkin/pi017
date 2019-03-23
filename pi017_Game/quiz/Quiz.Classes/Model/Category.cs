@@ -34,7 +34,7 @@ namespace Quiz.Classes.Model
 
     [XmlAttribute("id")]
     public int Id { get; set; }
-    [XmlElement("text")]
+    [XmlElement("txt")]
     public string Text { get; set; }
     [XmlIgnore]
     public Color BackColor { get; set; }

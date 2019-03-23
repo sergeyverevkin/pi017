@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="windows-1251"?>
+<ArrayOfCQuestion xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <CQuestion>
+    <Id>1</Id>
+    <Text>questionText1</Text>
+    <Level>1</Level>
+    <CategoryId>
+      <int>1</int>
+    </CategoryId>
+  </CQuestion>
+  <CQuestion>
+    <Id>2</Id>
+    <Text>questionText2</Text>
+    <Level>1</Level>
+    <CategoryId>
+      <int>1</int>
+    </CategoryId>
+  </CQuestion>
+  <CQuestion>
+    <Id>3</Id>
+    <Text>questionText3</Text>
+    <Level>1</Level>
+    <CategoryId>
+      <int>2</int>
+    </CategoryId>
+  </CQuestion>
+</ArrayOfCQuestion>

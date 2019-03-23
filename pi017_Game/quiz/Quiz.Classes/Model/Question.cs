@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Serialization;
 
 namespace Quiz.Classes.Model
 {
@@ -27,6 +28,14 @@ namespace Quiz.Classes.Model
       CategoryList = new List<CCategory>();
     }
 
+    /// <summary>
+    /// .ctor
+    /// </summary>
+    private CQuestion()
+    {
+
+    }
+
     /*
 - идентификатор (автоинкремент)
 - текст: строка
@@ -41,7 +50,11 @@ namespace Quiz.Classes.Model
     public string Text { get; set; }
     public int Level { get; set; }
     private List<CAnswer> AnswerList { get; set; }
-    private List<CCategory> CategoryList { get; set; }
+    [XmlIgnore]
+    public List<CCategory> CategoryList { get; private set; }
+    [XmlArray]
+    public List<int> CategoryId => 
+      CategoryList.Select(p => p.Id).ToList();
 
     /// <summary>
     /// Правильный ответ ли
@@ -55,5 +68,12 @@ namespace Quiz.Classes.Model
       }
       return false;
     }
+  }
+  /// <summary>
+  /// 
+  /// </summary>
+  public class CQuestionList : List<CQuestion>
+  {
+
   }
 }

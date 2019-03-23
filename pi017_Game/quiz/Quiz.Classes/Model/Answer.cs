@@ -19,7 +19,7 @@ namespace Quiz.Classes.Model
     /// <returns></returns>
     public bool WhetherAnswerIsCorrect(string sText)
     {
-      return Text.Equals(sText, StringComparison.InvariantCultureIgnoreCase);
+      return this.Text.Equals(sText, StringComparison.InvariantCultureIgnoreCase);
     }
   }
 }
