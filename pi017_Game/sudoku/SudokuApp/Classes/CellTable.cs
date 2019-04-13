@@ -5,12 +5,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ThreadTimer = System.Threading.Timer;
 
 namespace SudokuApp.Classes
 {
   public class CCellTable
   {
     private Random m_pRandom = new Random();
+    private ThreadTimer m_pTimer;
     private List<List<CCell>> _cells = new List<List<CCell>>();
 
     /// <summary>
@@ -30,6 +32,11 @@ namespace SudokuApp.Classes
     public CCellTable(int iPercent)
     {
       const int Size = 9;
+
+      m_pTimer = new ThreadTimer(h_OnTimer);
+      TimeSpan tsStart = new TimeSpan(0,0,3);
+      m_pTimer.Change(tsStart, tsStart);
+
       for (int ii = 0; ii < Size; ii++) {
         List<CCell> pRow = new List<CCell>();
         _cells.Add(pRow);
@@ -41,6 +48,16 @@ namespace SudokuApp.Classes
             : (CCell)new CUserCell();
           pRow.Add(pCell);
         }
+      }
+    }
+
+    private void h_OnTimer(object state)
+    {
+      if (m_pRandom.Next(0, 100) < 50)
+      {
+        int iCol = m_pRandom.Next(0, 9);
+        var pCell = Get(iCol, 0);
+        pCell.Value = "0";
       }
     }
 
