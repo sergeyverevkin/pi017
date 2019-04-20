@@ -69,12 +69,24 @@ namespace Quiz.Classes.Model
     /// </summary>
     public List<CPlayer> PlayerList { get; private set; }
     /// <summary>
-    /// 
+    /// Номер игрока, выбирающего вопрос
     /// </summary>
     public int CurrentTurn { get; set; }
+    /// <summary>
+    /// Номер игрока, отвечающего на вопрос
+    /// </summary>
+    public int AnsweredTurn { get; set; }
+    /// <summary>
+    /// Состояние игры
+    /// </summary>
+    public EQuizState QuizState { get; set; }
     /// <summary>
     /// Игровое поле
     /// </summary>
     public CGameField Field { get; private set; }
+    /// <summary>
+    /// Текущий вопрос
+    /// </summary>
+    public CQuestion CurrentQuestion { get; set; }
   }
 }
