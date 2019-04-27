@@ -32,13 +32,17 @@
       this.загрузитьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
       this.сохранитьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
       this.выходToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+      this.серверToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+      this.стартToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+      this.стопToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
       this.menuStrip1.SuspendLayout();
       this.SuspendLayout();
       // 
       // menuStrip1
       // 
       this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.файлToolStripMenuItem});
+            this.файлToolStripMenuItem,
+            this.серверToolStripMenuItem});
       this.menuStrip1.Location = new System.Drawing.Point(0, 0);
       this.menuStrip1.Name = "menuStrip1";
       this.menuStrip1.Size = new System.Drawing.Size(800, 24);
@@ -75,6 +79,29 @@
       this.выходToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
       this.выходToolStripMenuItem.Text = "Выход";
       // 
+      // серверToolStripMenuItem
+      // 
+      this.серверToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.стартToolStripMenuItem,
+            this.стопToolStripMenuItem});
+      this.серверToolStripMenuItem.Name = "серверToolStripMenuItem";
+      this.серверToolStripMenuItem.Size = new System.Drawing.Size(56, 20);
+      this.серверToolStripMenuItem.Text = "Сервер";
+      // 
+      // стартToolStripMenuItem
+      // 
+      this.стартToolStripMenuItem.Name = "стартToolStripMenuItem";
+      this.стартToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+      this.стартToolStripMenuItem.Text = "Старт";
+      this.стартToolStripMenuItem.Click += new System.EventHandler(this.стартToolStripMenuItem_Click);
+      // 
+      // стопToolStripMenuItem
+      // 
+      this.стопToolStripMenuItem.Name = "стопToolStripMenuItem";
+      this.стопToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+      this.стопToolStripMenuItem.Text = "Стоп";
+      this.стопToolStripMenuItem.Click += new System.EventHandler(this.стопToolStripMenuItem_Click);
+      // 
       // Form1
       // 
       this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -98,6 +125,9 @@
     private System.Windows.Forms.ToolStripMenuItem загрузитьToolStripMenuItem;
     private System.Windows.Forms.ToolStripMenuItem сохранитьToolStripMenuItem;
     private System.Windows.Forms.ToolStripMenuItem выходToolStripMenuItem;
+    private System.Windows.Forms.ToolStripMenuItem серверToolStripMenuItem;
+    private System.Windows.Forms.ToolStripMenuItem стартToolStripMenuItem;
+    private System.Windows.Forms.ToolStripMenuItem стопToolStripMenuItem;
   }
 }
 

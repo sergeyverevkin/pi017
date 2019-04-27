@@ -9,9 +9,9 @@ namespace Quiz.Classes.Model
     - ПравильныйОтветЛи(вариантОтвета: строка)
      */
      /// <summary>
-     /// Текст варианта ответа
+     /// Текст правильного варианта ответа
      /// </summary>
-    public string Text { get; set; }
+    public string CorrectAnswer { get; set; }
     /// <summary>
     /// Правильный ли ответ
     /// </summary>
@@ -19,7 +19,9 @@ namespace Quiz.Classes.Model
     /// <returns></returns>
     public bool WhetherAnswerIsCorrect(string sText)
     {
-      return this.Text.Equals(sText, StringComparison.InvariantCultureIgnoreCase);
+      string sMyAnswer = this.CorrectAnswer;
+      //return String.Equals(sMyAnswer, sText, StringComparison.InvariantCultureIgnoreCase);
+      return sMyAnswer.Equals(sText, StringComparison.InvariantCultureIgnoreCase);
     }
   }
 }

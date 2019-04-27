@@ -1,12 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Serialization;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Serialization;
 
 namespace Quiz.Classes.Model
 {
+  /// <summary>
+  /// Вопрос
+  /// </summary>
+  [DataContract]
   public class CQuestion
   {
     /// <summary>
@@ -46,11 +51,14 @@ namespace Quiz.Classes.Model
    проходить по всем правильным ответам и 
    вызывать их ПравильныйОтветЛи()
    */
+    [DataMember]
     public int Id { get; set; }
+    [DataMember]
     public string Text { get; set; }
+    [XmlIgnore]
+    [DataMember]
     public int Level { get; set; }
     private List<CAnswer> AnswerList { get; set; }
-    [XmlIgnore]
     public List<CCategory> CategoryList { get; private set; }
     [XmlArray]
     public List<int> CategoryId => 
