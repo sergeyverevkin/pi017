@@ -59,6 +59,11 @@ namespace QuizAdmin
         sUrlService
       );
       m_pHost.AddServiceEndpoint(
+        typeof(IPictureServer),
+        pBinding,
+        sUrlService
+      );
+      m_pHost.AddServiceEndpoint(
         typeof(IMetadataExchange),
         MetadataExchangeBindings.CreateMexHttpBinding(),
         sUrlServiceMeta

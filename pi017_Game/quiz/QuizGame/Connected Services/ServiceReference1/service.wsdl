@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="CGameServer" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="" namespace="http://schemas.datacontract.org/2004/07/Quiz.Classes.Model" />
+      <xsd:import schemaLocation="" namespace="http://schemas.datacontract.org/2004/07/Quiz.Classes.Service" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IGame_GetQuestion_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetQuestion" />
+  </wsdl:message>
+  <wsdl:message name="IGame_GetQuestion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetQuestionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPictureServer_GetPicture_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPicture" />
+  </wsdl:message>
+  <wsdl:message name="IPictureServer_GetPicture_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPictureResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPictureServer_GetMetaPicture_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMetaPicture" />
+  </wsdl:message>
+  <wsdl:message name="IPictureServer_GetMetaPicture_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMetaPictureResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPictureServer_GetPictureSet_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPictureSet" />
+  </wsdl:message>
+  <wsdl:message name="IPictureServer_GetPictureSet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPictureSetResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IGame">
+    <wsdl:operation name="GetQuestion">
+      <wsdl:input wsam:Action="http://tempuri.org/IGame/GetQuestion" message="tns:IGame_GetQuestion_InputMessage" />
+      <wsdl:output wsam:Action="http://tempuri.org/IGame/GetQuestionResponse" message="tns:IGame_GetQuestion_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="IPictureServer">
+    <wsdl:operation name="GetPicture">
+      <wsdl:input wsam:Action="http://tempuri.org/IPictureServer/GetPicture" message="tns:IPictureServer_GetPicture_InputMessage" />
+      <wsdl:output wsam:Action="http://tempuri.org/IPictureServer/GetPictureResponse" message="tns:IPictureServer_GetPicture_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMetaPicture">
+      <wsdl:input wsam:Action="http://tempuri.org/IPictureServer/GetMetaPicture" message="tns:IPictureServer_GetMetaPicture_InputMessage" />
+      <wsdl:output wsam:Action="http://tempuri.org/IPictureServer/GetMetaPictureResponse" message="tns:IPictureServer_GetMetaPicture_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPictureSet">
+      <wsdl:input wsam:Action="http://tempuri.org/IPictureServer/GetPictureSet" message="tns:IPictureServer_GetPictureSet_InputMessage" />
+      <wsdl:output wsam:Action="http://tempuri.org/IPictureServer/GetPictureSetResponse" message="tns:IPictureServer_GetPictureSet_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IGame" type="tns:IGame">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetQuestion">
+      <soap:operation soapAction="http://tempuri.org/IGame/GetQuestion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="BasicHttpBinding_IPictureServer" type="tns:IPictureServer">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetPicture">
+      <soap:operation soapAction="http://tempuri.org/IPictureServer/GetPicture" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMetaPicture">
+      <soap:operation soapAction="http://tempuri.org/IPictureServer/GetMetaPicture" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPictureSet">
+      <soap:operation soapAction="http://tempuri.org/IPictureServer/GetPictureSet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="CGameServer">
+    <wsdl:port name="BasicHttpBinding_IGame" binding="tns:BasicHttpBinding_IGame">
+      <soap:address location="http://0.0.0.0:8000/Service" />
+    </wsdl:port>
+    <wsdl:port name="BasicHttpBinding_IPictureServer" binding="tns:BasicHttpBinding_IPictureServer">
+      <soap:address location="http://0.0.0.0:8000/Service" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

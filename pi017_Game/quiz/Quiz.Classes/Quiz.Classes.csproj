@@ -58,6 +58,7 @@
     <Compile Include="Model\Quiz.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Service\GameServer.cs" />
+    <Compile Include="Service\IPictureServer.cs" />
     <Compile Include="Service\IGame.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
